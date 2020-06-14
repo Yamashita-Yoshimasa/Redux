@@ -1,0 +1,23 @@
+/*top*/
+.p-top{
+	color: #fff;
+	&__title{
+		font-size: 4rem;
+		font-weight: 900;
+		line-height: 1.08;
+		letter-spacing: -0.01em;
+		margin-bottom: 24px;;
+		@include media(pc-tab){
+		font-size: 5.2rem;
+		}
+	}
+	&__text{
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: 0.05em;
+		//padding-top: 24px;
+		background-color: rgba(0,0,0,0.2);
+		border-radius: 50% 50%;
+	}
+}

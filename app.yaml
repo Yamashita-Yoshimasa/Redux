@@ -1,0 +1,22 @@
+env: standard
+runtime: nodejs10
+service: default
+
+handlers:
+  - url: /static
+    static_dir: build/static
+
+  - url: /(.*\.(json|ico|js|css|png|svg|tff|woff|woff2|eot))$
+    static_files: build/\1
+    upload: build/.*\.(json|ico|js|css|png|svg|tff|woff|woff2|eot)$
+
+  - url: /subsidy/.*
+    static_files: build/index.html
+    upload: build/index.html
+
+  - url: /.*
+    static_files: build/index.html
+    upload: build/index.html
+
+
+

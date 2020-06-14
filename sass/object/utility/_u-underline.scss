@@ -1,0 +1,14 @@
+.u-underline::before,.u-underline::after{
+	content:"";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid $base_color;
+}
+ .u-underline--color::before,.u-underline--color::after{
+     border-color: #fff;		
+ }
+ .u-underline::before {
+     bottom: -5px;
+ }

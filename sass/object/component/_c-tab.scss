@@ -1,0 +1,20 @@
+/* component tab */
+.c-tab {
+  &__button {
+    -webkit-appearance: none;
+    background-color: $base_color;
+    border: none;
+    border-radius: 0.6rem 0.6rem 0 0;
+    color: #fff;
+    line-height: 1.18;
+    &.-active {
+      background-color: $blue;
+    }
+  }
+  &__content {
+    border: .1rem solid $base_color;
+  }
+  &__box { 
+    text-align: left;
+  }
+}

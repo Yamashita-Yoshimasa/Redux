@@ -1,0 +1,9 @@
+/* ABOUT ME */
+.l-about{
+	padding: 64px 30px;
+	background-color: #f9f9f9;
+	@include media(pc_min){
+		padding-right:calc(calc(100% - 1024px) / 2);
+		padding-left:calc(calc(100% - 1024px) / 2);
+	}
+}

@@ -1,0 +1,141 @@
+/* ABOUT ME */
+.p-about{
+	text-align: center;
+	@include media(pc-tab){
+		position: relative;
+	}
+	&__title{
+		color: $base_color;
+		position: relative;
+		display: inline-block;
+		font-size: 3rem;
+	}
+	&__wrap{
+		padding-top:48px;
+		font-size: 1.2rem;
+		color: $base_color;
+		overflow: hidden;
+		margin: 0 auto;
+		width: 100%;
+	}
+	&__container{
+		display: flex;
+		flex-wrap: wrap;
+		transition: all 800ms 0s ease;
+		width: 100%;
+		&:nth-of-type(1){
+			transform: translateX(-150vw);
+		}
+		&:nth-child(2){
+			margin-top: 20px;
+			margin-bottom: 16px;
+			transform: translateX(150vw);
+		}
+		@include media(pc-tab){
+			flex-wrap: nowrap;
+			align-items: center;
+			transition: none 0ms 0s ease;
+			transform: translateX(0) !important;
+			width: 100%;
+			border: none;
+			&:first-child{
+				text-align: left;
+				margin: 0 auto;
+				& .p-about__list{
+					font-size: 2rem;
+					display: inline-block;
+					padding: 8px;
+					//right: 0;
+				}
+			}
+			&:last-child{
+				margin: 48px auto 0 auto;
+				text-align:start;
+				& .p-about__text{
+					font-size: 2rem;
+					display: inline-block;
+					padding: 8px;
+					right: 0;
+				}
+			}
+		}
+	}
+	@include media(pc-tab){
+		&__pc{
+			color: $base_color;
+			white-space: nowrap;
+		}
+	}
+	&__pro{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include media(pc-tab){
+			.p-about &{
+				width: 30%;
+			}
+			
+		}
+	}
+	&__profile{
+		font-size: 1.6rem;
+		@include media(pc-tab){
+			.p-about &--pc{
+				white-space: nowrap;
+				font-size: 3.6rem;
+				text-align: left;
+			}
+		}
+	}
+	&__intro{
+		font-size: 1.6rem;
+		text-align: center;
+		@include media(pc-tab){
+			.p-about &--pc{
+				font-size: 3.6rem;
+				display: block;
+				width: 30%;
+			}
+		}
+	}
+	&__list{
+		line-height: 1.1;
+		padding-top: 10px;
+		width: 100%;
+		display: inline-block;
+		@include media(pc-tab){
+			width: 70%;
+			white-space: nowrap;
+			text-align: left;
+		}
+	}
+	
+	&__box{
+		width: 100%;
+		@include media(pc-tab){
+			width: 70%;
+		}
+	}
+	
+	&__text{
+		display: block;
+		line-height: 1.1;
+		padding-top: 10px;
+		text-align: left;
+		width: 100%;
+		@include media(pc-tab){
+		}
+	}
+	&__item{
+		text-align: left;
+	}
+	& .is-active--about{
+		display: block;
+		transform: translateX(0);
+		@include media(pc-tab){
+			display: flex;
+		}
+	}
+
+}
+

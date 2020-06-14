@@ -1,0 +1,13 @@
+.c-catch {
+    display: inline-block;
+    font-size: 4rem;
+    margin-top: 30px;
+    padding-bottom: 15px;
+    /*borderbottomは環境により表示が変わってしまう*/
+    /*border-bottom: 4px double #000;*/
+    letter-spacing: 2px;
+    position: relative;
+    @media screen and(max-width:768px) {
+        font-size: 2.5rem;
+    }
+}

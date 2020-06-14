@@ -1,0 +1,177 @@
+/* modal component */
+.c-modal {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: scale(0);
+  transition: none;
+  width: 100vw;
+  z-index: 101;
+
+  &.-flex {
+    align-items: center;
+    display: flex;
+  }
+
+  &.-view {
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  &.is-active {
+    transform: scale(1);
+  }
+
+  &__main {
+    border-radius: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100rem;
+    overflow: hidden;
+    padding: 3rem;
+    position: relative;
+    width: 90vw;
+
+    @include media(pc-tab) {
+      width: 70vw;
+    }
+
+    &.-view {
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+
+    @include media(tab) {
+      font-size: 2rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    overflow: hidden;
+    width: 100%;
+
+    @include media(tab_min) {
+      flex-direction: row;
+    }
+  }
+
+  &__scroll {
+    display: inline-block;
+    width: 100%;
+
+    @include media(pc-tab) {
+      margin: 0 auto;
+      width: 70%;
+    }
+  }
+
+  &__image_box {
+    margin: 0 auto;
+    overflow: scroll;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 56%;
+    }
+
+    &--sp {
+      margin: 0 auto;
+      width: 50%;
+
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 130%;
+      }
+    }
+  }
+
+  &__image {
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  &__text_box {
+    display: inline-block;
+    margin: 30px auto 0 auto;
+    text-align: left;
+    width: 90%;
+
+    @include media(pc_min) {
+      margin-left: 2rem;
+      margin-top: 0;
+    }
+
+    @include media(pc-tab) {
+      width: 70%;
+    }
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    text-align: left;
+    white-space: normal;
+    width: 100%;
+    word-wrap: break-word;
+
+    @include media(pc-tab) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__sub_title {
+    font-size: 1.2rem;
+    padding: 0.1rem;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    @include media(pc-tab) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__close {
+    height: 1.8rem;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    width: 23px;
+
+    &--bar {
+      background-color: rgba(80,81,83,1);
+      display: block;
+      height: 0.2rem;
+      width: 23px;
+
+      &:nth-of-type(1) {
+        position: absolute;
+        top: 0.9rem;
+        transform: rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        position: absolute;
+        top: 0.9rem;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

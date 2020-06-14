@@ -1,0 +1,14 @@
+/*avatar*/
+	.p-avatar {
+		&__top {
+			margin: 0;
+		}
+		& img{
+			height: 6.4rem;
+			width: 6.4rem;
+			@include media(pc-tab){
+				height: 15rem;
+				width: 15rem;
+			}
+		}
+	}

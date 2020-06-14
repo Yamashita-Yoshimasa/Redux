@@ -1,0 +1,26 @@
+/* footer */
+.p-footer{
+	color: #fff;
+	font-size: 1.6rem;
+	text-align: center;
+	&__e-mail{
+		margin-top: 40px;
+		font-size: 1.2rem;
+		font-style: normal;
+	}
+	&__twitter{
+		margin-top: 40px;
+		color: #fff;
+		font-size: 2.4rem;
+		&--text{
+			color: #fff;
+			font-size: 1.2rem;
+			margin-top: 5px;
+		}
+	}
+	&__copy{
+		margin-top: 40px;
+		font-size: 1.2rem;
+		opacity: 0.5;
+	}
+}

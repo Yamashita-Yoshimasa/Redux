@@ -1,0 +1,50 @@
+/* MY SKILL */
+.p-skill{
+	text-align: center;
+	&__title{
+		color: #fff;
+		position: relative;
+		display: inline-block;
+		font-size: 3rem;
+		}
+	&__table{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		//table-layout: fixed;
+		font-size: 5rem;
+		width: 100%;
+		&:nth-of-type(1){
+			margin-top: 48px;
+		}
+		&:nth-of-type(2){
+			margin-top: 20px;
+		}
+	}
+	&__fonts{
+		display: inline-block;
+		color: #fff;
+		width: 33.3%;
+		&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(6) {
+			margin-top: 20px;
+		}
+		@include media(pc_min){
+			font-size: 6rem;
+		}
+	}
+	&__name{
+		font-size: 1.6rem;
+		margin-top: 10px;
+			@include media(pc_min){
+			font-size: 3rem;
+		}
+	}
+	&__text{
+		font-size: 1.4rem;
+		margin-top: 10px;
+		margin: 10px auto 0 auto;
+		width: 90%;
+	}
+
+}

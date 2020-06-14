@@ -1,0 +1,11 @@
+.u-aspect{
+    position: relative;
+    display: block;
+    width: 100%;
+    &::before{
+        content:"";
+        display:block;
+        /*padding marginの％指定は親要素のwidthを100％として計算する*/
+        padding-top: 62.5%;
+    }
+}
